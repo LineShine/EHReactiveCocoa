@@ -1,0 +1,15 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'EHReactiveCocoa_Example' do
+  pod 'EHReactiveCocoa', :path => '../'
+
+#    pod 'ReactiveCocoa', '2.5'
+
+  target 'EHReactiveCocoa_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

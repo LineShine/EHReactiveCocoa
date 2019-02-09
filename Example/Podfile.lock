@@ -1,0 +1,24 @@
+PODS:
+  - EHReactiveCocoa (0.0.1):
+    - EHReactiveCocoa/Core (= 0.0.1)
+    - EHReactiveCocoa/no-arc (= 0.0.1)
+    - EHReactiveCocoa/UI (= 0.0.1)
+  - EHReactiveCocoa/Core (0.0.1):
+    - EHReactiveCocoa/no-arc
+  - EHReactiveCocoa/no-arc (0.0.1)
+  - EHReactiveCocoa/UI (0.0.1):
+    - EHReactiveCocoa/Core
+
+DEPENDENCIES:
+  - EHReactiveCocoa (from `../`)
+
+EXTERNAL SOURCES:
+  EHReactiveCocoa:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EHReactiveCocoa: 187155c347968dd542b6f7a5c95339f324158bb4
+
+PODFILE CHECKSUM: 4b338d45aa70c40a8b07e9716629ef0a47f61a67
+
+COCOAPODS: 1.6.0
