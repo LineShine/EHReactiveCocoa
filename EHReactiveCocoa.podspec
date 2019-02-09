@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EHReactiveCocoa'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'ReactiveCocoa v2.5'
 
 # This description is used to generate tags and improve search results.
@@ -28,10 +28,10 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.frameworks = "Foundation","UIKit","MapKit","CoreGraphics"
-  s.public_header_files = 'EHReactiveCocoa/Classes/**/*.h'
+  s.public_header_files = 'EHReactiveCocoa/**/*.h'
   
     #MRC Setting
-    non_arc_files = 'EHReactiveCocoa/Classes/**/RACObjCRuntime.{h,m}'
+    non_arc_files = 'EHReactiveCocoa/RACObjCRuntime.{h,m}'
     s.exclude_files = non_arc_files
 
     s.subspec 'no-arc' do |sp|
@@ -40,19 +40,19 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'Core' do |spc|
-      spc.source_files = ['EHReactiveCocoa/Classes/**/EHReactiveCocoa.h',
-                          'EHReactiveCocoa/Classes/**/RACmetamacros.h',
-                          'EHReactiveCocoa/Classes/**/RACEXT*.{h,m}',
-                          'EHReactiveCocoa/Classes/**/NS*.{h,m}',
-                          'EHReactiveCocoa/Classes/**/*.d',
-                          'EHReactiveCocoa/Classes/**/RAC{A,B,C,D,E,G,I,K,M,P,Q,R,S,T,U,V}*.{h,m}'
+      spc.source_files = ['EHReactiveCocoa/EHReactiveCocoa.h',
+                          'EHReactiveCocoa/extobjc/RACmetamacros.h',
+                          'EHReactiveCocoa/extobjc/RACEXT*.{h,m}',
+                          'EHReactiveCocoa/NS*.{h,m}',
+                          'EHReactiveCocoa/*.d',
+                          'EHReactiveCocoa/RAC{A,B,C,D,E,G,I,K,M,P,Q,R,S,T,U,V}*.{h,m}'
                         ]
       spc.dependency 'EHReactiveCocoa/no-arc'
     
     end
 
     s.subspec 'UI' do |spui|
-      spui.source_files = [ 'EHReactiveCocoa/Classes/**/UI*.{h,m}','EHReactiveCocoa/Classes/**/MK*.{h,m}' ]
+      spui.source_files = [ 'EHReactiveCocoa/UI*.{h,m}','EHReactiveCocoa/MK*.{h,m}' ]
       spui.dependency 'EHReactiveCocoa/Core'
     end
 
