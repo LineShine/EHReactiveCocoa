@@ -7,6 +7,7 @@
 //
 
 #import "EHViewController.h"
+#import <EHReactiveCocoa.h>
 
 @interface EHViewController ()
 
@@ -18,6 +19,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"RAC Button" forState:UIControlStateNormal];
+    btn.frame = CGRectMake(100, 100, 100, 40);
+    [btn setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:btn];
+    
+    [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        NSLog(@"RAC Btn Click");
+    }];
 }
 
 - (void)didReceiveMemoryWarning

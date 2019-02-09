@@ -1,0 +1,6 @@
+framework module EHReactiveCocoa {
+  umbrella header "EHReactiveCocoa-umbrella.h"
+
+  export *
+  module * { export * }
+}

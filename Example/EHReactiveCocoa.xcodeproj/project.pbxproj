@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C880BFD4F99D306FB92A183 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0C880BFD4F99D306FB92A183 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		351D1C7C8E37C03C6650D9C0 /* Pods-EHReactiveCocoa_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHReactiveCocoa_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EHReactiveCocoa_Example/Pods-EHReactiveCocoa_Example.release.xcconfig"; sourceTree = "<group>"; };
 		51B83EC3A14296E018BE8008 /* Pods_EHReactiveCocoa_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EHReactiveCocoa_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		589A7DA15E5E08780D1BA1B9 /* Pods-EHReactiveCocoa_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHReactiveCocoa_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EHReactiveCocoa_Tests/Pods-EHReactiveCocoa_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,9 +64,9 @@
 		740B4DFA5FFE65AE4B8BF43C /* Pods-EHReactiveCocoa_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHReactiveCocoa_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EHReactiveCocoa_Tests/Pods-EHReactiveCocoa_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9478E6E76DE52C1724419EB4 /* Pods-EHReactiveCocoa_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHReactiveCocoa_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EHReactiveCocoa_Example/Pods-EHReactiveCocoa_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B9CFD19EAE75506930B7D3B3 /* EHReactiveCocoa.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EHReactiveCocoa.podspec; path = ../EHReactiveCocoa.podspec; sourceTree = "<group>"; };
+		B9CFD19EAE75506930B7D3B3 /* EHReactiveCocoa.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EHReactiveCocoa.podspec; path = ../EHReactiveCocoa.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C934723B9C1CC648083D5490 /* Pods_EHReactiveCocoa_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EHReactiveCocoa_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE7DD30FFE898EBF763879B2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FE7DD30FFE898EBF763879B2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,8 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				8DE47FA098A5FB8BBBED3C79 /* [CP] Embed Pods Frameworks */,
-				D0A081E4E0721BC38BC161FF /* [CP] Copy Pods Resources */,
+				A49E65BE2814AC758D2BF427 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,8 +226,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				8ED51D02AFF711972986B9A3 /* [CP] Embed Pods Frameworks */,
-				7331D4158D08568CF3A0C5FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "240402181@qq.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 4H44DAN2YD;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -297,39 +297,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7331D4158D08568CF3A0C5FC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EHReactiveCocoa_Tests/Pods-EHReactiveCocoa_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7F34ED241F207D360EF14F1B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-EHReactiveCocoa_Tests-checkManifestLockResult.txt",
 			);
@@ -338,7 +315,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8DE47FA098A5FB8BBBED3C79 /* [CP] Embed Pods Frameworks */ = {
+		A49E65BE2814AC758D2BF427 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -346,7 +323,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EHReactiveCocoa_Example/Pods-EHReactiveCocoa_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EHReactiveCocoa_Example/Pods-EHReactiveCocoa_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EHReactiveCocoa/EHReactiveCocoa.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -357,45 +334,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EHReactiveCocoa_Example/Pods-EHReactiveCocoa_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8ED51D02AFF711972986B9A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EHReactiveCocoa_Tests/Pods-EHReactiveCocoa_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D0A081E4E0721BC38BC161FF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EHReactiveCocoa_Example/Pods-EHReactiveCocoa_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EHReactiveCocoa_Example/Pods-EHReactiveCocoa_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0E91047198ABE66C8E89EA8 /* [CP] Check Pods Manifest.lock */ = {
@@ -403,15 +342,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-EHReactiveCocoa_Example-checkManifestLockResult.txt",
 			);
@@ -557,6 +492,7 @@
 			baseConfigurationReference = 9478E6E76DE52C1724419EB4 /* Pods-EHReactiveCocoa_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4H44DAN2YD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EHReactiveCocoa/EHReactiveCocoa-Prefix.pch";
 				INFOPLIST_FILE = "EHReactiveCocoa/EHReactiveCocoa-Info.plist";
@@ -572,6 +508,7 @@
 			baseConfigurationReference = 351D1C7C8E37C03C6650D9C0 /* Pods-EHReactiveCocoa_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4H44DAN2YD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EHReactiveCocoa/EHReactiveCocoa-Prefix.pch";
 				INFOPLIST_FILE = "EHReactiveCocoa/EHReactiveCocoa-Info.plist";
