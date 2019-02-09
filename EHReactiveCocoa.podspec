@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EHReactiveCocoa'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of EHReactiveCocoa.'
+  s.version          = '0.0.1'
+  s.summary          = 'ReactiveCocoa v2.5'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,42 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                        ReactiveCocoa pod version 2.5
                        DESC
 
-  s.homepage         = 'https://github.com/240402181@qq.com/EHReactiveCocoa'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/ReactiveCocoa/ReactiveCocoa'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '240402181@qq.com' => 'xiang.ling@zuolin.com' }
-  s.source           = { :git => 'https://github.com/240402181@qq.com/EHReactiveCocoa.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'xiang.ling' => 'xiang.ling@zuolin.com' }
+  s.source           = { :git => 'http://10.1.1.217/xiang.ling/EHReactiveCocoa.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'EHReactiveCocoa/Classes/**/*'
+  s.frameworks = "Foundation","UIKit","MapKit","CoreGraphics"
+  s.public_header_files = 'EHReactiveCocoa/Classes/**/*.h'
   
-  # s.resource_bundles = {
-  #   'EHReactiveCocoa' => ['EHReactiveCocoa/Assets/*.png']
-  # }
+    #MRC Setting
+    non_arc_files = 'EHReactiveCocoa/Classes/**/RACObjCRuntime.{h,m}'
+    s.exclude_files = non_arc_files
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+    s.subspec 'no-arc' do |sp|
+        sp.source_files = non_arc_files
+        sp.requires_arc = false
+    end
+
+    s.subspec 'Core' do |spc|
+      spc.source_files = ['EHReactiveCocoa/Classes/**/EHReactiveCocoa.h',
+                          'EHReactiveCocoa/Classes/**/RACmetamacros.h',
+                          'EHReactiveCocoa/Classes/**/RACEXT*.{h,m}',
+                          'EHReactiveCocoa/Classes/**/NS*.{h,m}',
+                          'EHReactiveCocoa/Classes/**/*.d',
+                          'EHReactiveCocoa/Classes/**/RAC{A,B,C,D,E,G,I,K,M,P,Q,R,S,T,U,V}*.{h,m}'
+                        ]
+      spc.dependency 'EHReactiveCocoa/no-arc'
+    
+    end
+
+    s.subspec 'UI' do |spui|
+      spui.source_files = [ 'EHReactiveCocoa/Classes/**/UI*.{h,m}','EHReactiveCocoa/Classes/**/MK*.{h,m}' ]
+      spui.dependency 'EHReactiveCocoa/Core'
+    end
+
 end
