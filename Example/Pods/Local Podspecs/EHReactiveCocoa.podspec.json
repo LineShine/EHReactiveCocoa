@@ -1,6 +1,6 @@
 {
   "name": "EHReactiveCocoa",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "ReactiveCocoa v2.5",
   "description": "ReactiveCocoa pod version 2.5",
   "homepage": "https://github.com/ReactiveCocoa/ReactiveCocoa",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "http://10.1.1.217/xiang.ling/EHReactiveCocoa.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "8.0"
@@ -24,23 +24,30 @@
     "MapKit",
     "CoreGraphics"
   ],
-  "public_header_files": "EHReactiveCocoa/Classes/**/*.h",
-  "exclude_files": "EHReactiveCocoa/Classes/**/RACObjCRuntime.{h,m}",
+  "exclude_files": "EHReactiveCocoa/RACObjCRuntime.{h,m}",
   "subspecs": [
     {
       "name": "no-arc",
-      "source_files": "EHReactiveCocoa/Classes/**/RACObjCRuntime.{h,m}",
-      "requires_arc": false
+      "source_files": "EHReactiveCocoa/RACObjCRuntime.{h,m}",
+      "requires_arc": false,
+      "public_header_files": "EHReactiveCocoa/RACObjCRuntime.h"
     },
     {
       "name": "Core",
       "source_files": [
-        "EHReactiveCocoa/Classes/**/EHReactiveCocoa.h",
-        "EHReactiveCocoa/Classes/**/RACmetamacros.h",
-        "EHReactiveCocoa/Classes/**/RACEXT*.{h,m}",
-        "EHReactiveCocoa/Classes/**/NS*.{h,m}",
-        "EHReactiveCocoa/Classes/**/*.d",
-        "EHReactiveCocoa/Classes/**/RAC{A,B,C,D,E,G,I,K,M,P,Q,R,S,T,U,V}*.{h,m}"
+        "EHReactiveCocoa/EHReactiveCocoa.h",
+        "EHReactiveCocoa/extobjc/RACmetamacros.h",
+        "EHReactiveCocoa/extobjc/RACEXT*.{h,m}",
+        "EHReactiveCocoa/NS*.{h,m}",
+        "EHReactiveCocoa/*.d",
+        "EHReactiveCocoa/RAC{A,B,C,D,E,G,I,K,M,P,Q,R,S,T,U,V}*.{h,m}"
+      ],
+      "public_header_files": [
+        "EHReactiveCocoa/EHReactiveCocoa.h",
+        "EHReactiveCocoa/extobjc/RACmetamacros.h",
+        "EHReactiveCocoa/extobjc/RACEXT*.h",
+        "EHReactiveCocoa/NS*.h",
+        "EHReactiveCocoa/RAC{A,B,C,D,E,G,I,K,M,P,Q,R,S,T,U,V}*.h"
       ],
       "dependencies": {
         "EHReactiveCocoa/no-arc": [
@@ -51,8 +58,12 @@
     {
       "name": "UI",
       "source_files": [
-        "EHReactiveCocoa/Classes/**/UI*.{h,m}",
-        "EHReactiveCocoa/Classes/**/MK*.{h,m}"
+        "EHReactiveCocoa/UI*.{h,m}",
+        "EHReactiveCocoa/MK*.{h,m}"
+      ],
+      "public_header_files": [
+        "EHReactiveCocoa/UI*.h",
+        "EHReactiveCocoa/MK*.h"
       ],
       "dependencies": {
         "EHReactiveCocoa/Core": [

@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.frameworks = "Foundation","UIKit","MapKit","CoreGraphics"
-  s.public_header_files = 'EHReactiveCocoa/**/*.h'
+  # ,"libc++","libz","libicucore","stdlib"
   
     #MRC Setting
     non_arc_files = 'EHReactiveCocoa/RACObjCRuntime.{h,m}'
@@ -37,6 +37,7 @@ Pod::Spec.new do |s|
     s.subspec 'no-arc' do |sp|
         sp.source_files = non_arc_files
         sp.requires_arc = false
+        sp.public_header_files = 'EHReactiveCocoa/RACObjCRuntime.h'
     end
 
     s.subspec 'Core' do |spc|
@@ -47,13 +48,21 @@ Pod::Spec.new do |s|
                           'EHReactiveCocoa/*.d',
                           'EHReactiveCocoa/RAC{A,B,C,D,E,G,I,K,M,P,Q,R,S,T,U,V}*.{h,m}'
                         ]
+      spc.public_header_files = [ 'EHReactiveCocoa/EHReactiveCocoa.h',
+                                  'EHReactiveCocoa/extobjc/RACmetamacros.h',
+                                  'EHReactiveCocoa/extobjc/RACEXT*.h',
+                                  'EHReactiveCocoa/NS*.h',
+                                  'EHReactiveCocoa/RAC{A,B,C,D,E,G,I,K,M,P,Q,R,S,T,U,V}*.h'
+                                ]
       spc.dependency 'EHReactiveCocoa/no-arc'
     
     end
 
     s.subspec 'UI' do |spui|
       spui.source_files = [ 'EHReactiveCocoa/UI*.{h,m}','EHReactiveCocoa/MK*.{h,m}' ]
+      spui.public_header_files = [ 'EHReactiveCocoa/UI*.h','EHReactiveCocoa/MK*.h' ]
       spui.dependency 'EHReactiveCocoa/Core'
+
     end
 
 end
