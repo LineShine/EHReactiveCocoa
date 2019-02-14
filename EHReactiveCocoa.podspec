@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EHReactiveCocoa'
-  s.version          = '0.0.2'
+  s.version          = '0.0.4'
   s.summary          = 'ReactiveCocoa v2.5'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/ReactiveCocoa/ReactiveCocoa'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'xiang.ling' => 'xiang.ling@zuolin.com' }
-  s.source           = { :git => 'http://10.1.1.217/xiang.ling/EHReactiveCocoa.git', :tag => s.version.to_s }
+  s.source           = { :git => 'http://10.1.1.217/xiang.ling/EHReactiveCocoa.git', :tag => '0.0.4' }
 
   s.ios.deployment_target = '7.0'
   s.frameworks = "Foundation","UIKit","MapKit","CoreGraphics"
