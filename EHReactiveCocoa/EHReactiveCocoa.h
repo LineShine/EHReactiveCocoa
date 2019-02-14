@@ -62,7 +62,7 @@ FOUNDATION_EXPORT const unsigned char EHReactiveCocoaVersionString[];
 #import <EHReactiveCocoa/RACUnit.h>
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-	#import <EHReactiveCocoa/MKAnnotationView+RACSignalSupport.h>
+    #import "MKAnnotationView+RACSignalSupport.h"
 	#import <EHReactiveCocoa/UIActionSheet+RACSignalSupport.h>
 	#import <EHReactiveCocoa/UIAlertView+RACSignalSupport.h>
 	#import <EHReactiveCocoa/UIBarButtonItem+RACCommandSupport.h>

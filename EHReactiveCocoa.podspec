@@ -26,10 +26,11 @@ Pod::Spec.new do |s|
   s.author           = { 'xiang.ling' => 'xiang.ling@zuolin.com' }
   s.source           = { :git => 'http://10.1.1.217/xiang.ling/EHReactiveCocoa.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
   s.frameworks = "Foundation","UIKit","MapKit","CoreGraphics"
+#  s.libraries = "z", "c++"
   # ,"libc++","libz","libicucore","stdlib"
-  
+
     #MRC Setting
     non_arc_files = 'EHReactiveCocoa/RACObjCRuntime.{h,m}'
     s.exclude_files = non_arc_files
