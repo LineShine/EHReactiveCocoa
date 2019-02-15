@@ -1,6 +1,6 @@
 {
   "name": "EHReactiveCocoa",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "summary": "ReactiveCocoa v2.5",
   "description": "ReactiveCocoa pod version 2.5",
   "homepage": "https://github.com/ReactiveCocoa/ReactiveCocoa",
@@ -9,21 +9,16 @@
     "file": "LICENSE"
   },
   "authors": {
-    "xiang.ling": "xiang.ling@zuolin.com"
+    "Linc": "240402181@qq.com"
   },
   "source": {
-    "git": "http://10.1.1.217/xiang.ling/EHReactiveCocoa.git",
-    "tag": "0.0.2"
+    "git": "https://github.com/LineShine/EHReactiveCocoa.git",
+    "tag": "0.1.0"
   },
   "platforms": {
     "ios": "7.0"
   },
-  "frameworks": [
-    "Foundation",
-    "UIKit",
-    "MapKit",
-    "CoreGraphics"
-  ],
+  "frameworks": "Foundation",
   "exclude_files": "EHReactiveCocoa/RACObjCRuntime.{h,m}",
   "subspecs": [
     {

@@ -1,12 +1,12 @@
 PODS:
-  - EHReactiveCocoa (0.0.2):
-    - EHReactiveCocoa/Core (= 0.0.2)
-    - EHReactiveCocoa/no-arc (= 0.0.2)
-    - EHReactiveCocoa/UI (= 0.0.2)
-  - EHReactiveCocoa/Core (0.0.2):
+  - EHReactiveCocoa (0.1.0):
+    - EHReactiveCocoa/Core (= 0.1.0)
+    - EHReactiveCocoa/no-arc (= 0.1.0)
+    - EHReactiveCocoa/UI (= 0.1.0)
+  - EHReactiveCocoa/Core (0.1.0):
     - EHReactiveCocoa/no-arc
-  - EHReactiveCocoa/no-arc (0.0.2)
-  - EHReactiveCocoa/UI (0.0.2):
+  - EHReactiveCocoa/no-arc (0.1.0)
+  - EHReactiveCocoa/UI (0.1.0):
     - EHReactiveCocoa/Core
 
 DEPENDENCIES:
@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EHReactiveCocoa: 60deb39158ff7701ba0202107a7b51ff017b7343
+  EHReactiveCocoa: 5599aa655485c102a5297a52f116288d0e87d813
 
 PODFILE CHECKSUM: 4b338d45aa70c40a8b07e9716629ef0a47f61a67
 
