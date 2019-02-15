@@ -61,29 +61,35 @@ FOUNDATION_EXPORT const unsigned char EHReactiveCocoaVersionString[];
 #import <EHReactiveCocoa/RACTuple.h>
 #import <EHReactiveCocoa/RACUnit.h>
 
-#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-    #import <EHReactiveCocoa/MKAnnotationView+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UIActionSheet+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UIAlertView+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UIBarButtonItem+RACCommandSupport.h>
-    #import <EHReactiveCocoa/UIButton+RACCommandSupport.h>
-    #import <EHReactiveCocoa/UICollectionReusableView+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UIControl+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UIDatePicker+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UIGestureRecognizer+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UIImagePickerController+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UIRefreshControl+RACCommandSupport.h>
-    #import <EHReactiveCocoa/UISegmentedControl+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UISlider+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UIStepper+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UISwitch+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UITableViewCell+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UITableViewHeaderFooterView+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UITextField+RACSignalSupport.h>
-    #import <EHReactiveCocoa/UITextView+RACSignalSupport.h>
+#if TARGET_OS_WATCH
+#elif TARGET_OS_IOS || TARGET_OS_TV
+#import <EHReactiveCocoa/UIBarButtonItem+RACCommandSupport.h>
+#import <EHReactiveCocoa/UIButton+RACCommandSupport.h>
+#import <EHReactiveCocoa/UICollectionReusableView+RACSignalSupport.h>
+#import <EHReactiveCocoa/UIControl+RACSignalSupport.h>
+#import <EHReactiveCocoa/UIGestureRecognizer+RACSignalSupport.h>
+#import <EHReactiveCocoa/UISegmentedControl+RACSignalSupport.h>
+#import <EHReactiveCocoa/UITableViewCell+RACSignalSupport.h>
+#import <EHReactiveCocoa/UITableViewHeaderFooterView+RACSignalSupport.h>
+#import <EHReactiveCocoa/UITextField+RACSignalSupport.h>
+#import <EHReactiveCocoa/UITextView+RACSignalSupport.h>
+
+#if TARGET_OS_IOS
+#import <EHReactiveCocoa/NSURLConnection+RACSupport.h>
+#import <EHReactiveCocoa/UIStepper+RACSignalSupport.h>
+#import <EHReactiveCocoa/UIDatePicker+RACSignalSupport.h>
+#import <EHReactiveCocoa/UIAlertView+RACSignalSupport.h>
+#import <EHReactiveCocoa/UIActionSheet+RACSignalSupport.h>
+#import <EHReactiveCocoa/MKAnnotationView+RACSignalSupport.h>
+#import <EHReactiveCocoa/UIImagePickerController+RACSignalSupport.h>
+#import <EHReactiveCocoa/UIRefreshControl+RACCommandSupport.h>
+#import <EHReactiveCocoa/UISlider+RACSignalSupport.h>
+#import <EHReactiveCocoa/UISwitch+RACSignalSupport.h>
+#endif
 #elif TARGET_OS_MAC
-	#import <EHReactiveCocoa/NSControl+RACCommandSupport.h>
-	#import <EHReactiveCocoa/NSControl+RACTextSignalSupport.h>
-	#import <EHReactiveCocoa/NSObject+RACAppKitBindings.h>
-	#import <EHReactiveCocoa/NSText+RACSignalSupport.h>
+#import <EHReactiveCocoa/NSControl+RACCommandSupport.h>
+#import <EHReactiveCocoa/NSControl+RACTextSignalSupport.h>
+#import <EHReactiveCocoa/NSObject+RACAppKitBindings.h>
+#import <EHReactiveCocoa/NSText+RACSignalSupport.h>
+#import <EHReactiveCocoa/NSURLConnection+RACSupport.h>
 #endif

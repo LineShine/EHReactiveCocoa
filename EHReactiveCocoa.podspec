@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EHReactiveCocoa'
-  s.version          = '0.0.5'
+  s.version          = '0.1.0'
   s.summary          = 'ReactiveCocoa v2.5'
 
 # This description is used to generate tags and improve search results.
@@ -23,13 +23,11 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://github.com/ReactiveCocoa/ReactiveCocoa'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'xiang.ling' => 'xiang.ling@zuolin.com' }
-  s.source           = { :git => 'http://10.1.1.217/xiang.ling/EHReactiveCocoa.git', :tag => s.version.to_s }
+  s.author           = { 'Linc' => '240402181@qq.com' }
+  s.source           = { :git => 'https://github.com/LineShine/EHReactiveCocoa.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '7.0'
-  s.frameworks = "Foundation","UIKit","MapKit","CoreGraphics"
-#  s.libraries = "z", "c++"
-  # ,"libc++","libz","libicucore","stdlib"
+  s.frameworks = "Foundation"
 
     #MRC Setting
     non_arc_files = 'EHReactiveCocoa/RACObjCRuntime.{h,m}'
